@@ -21,6 +21,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->boolean('blocked')->default(false);
+
+            $table->string("informatie")->nullable();
+            $table->string("image")->default("/img/pet_default.jpg");
+            $table->unsignedBigInteger("user")->nullable();
+            
         });
     }
 
