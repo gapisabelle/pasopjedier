@@ -136,6 +136,11 @@ small {
 Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
 */
 
+.logo__imagePOJD{
+  width:10rem;
+}
+
+
 sub,
 sup {
   font-size: 75%;
@@ -2325,7 +2330,7 @@ select {
 
 .bg-gray-100 {
   --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  background-color: #a6b1e1;
 }
 
 .bg-gray-200 {

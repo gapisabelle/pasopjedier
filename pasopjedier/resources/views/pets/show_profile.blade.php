@@ -1,10 +1,11 @@
 @extends('default')
 @section('title')
+Jouw profiel
 @endsection
 @section('content')
-<ul>
 
-    @include('pets.components.petCard--show_profile')
 
-</ul>
+@include('pets.components.petCard--show_profile')
+
+
 @endsection

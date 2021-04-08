@@ -6,9 +6,7 @@
             <figure class="GridCard__figure">
                 <img class="GridCard__image" src="{{$user->image}}" alt="{{$user->name}}" />
             </figure>
-            <a href="/user/{{$user->id}}/block">
-            <button class="GridCard__Adminbutton"> Blokkeren </button>
-            </a>
+            <input class="GridCard__Adminbutton" type=button onClick="location.href='/user/{{$user->id}}/block'" value='Blokkeren'>        
         </article>
       </a>
 </li>

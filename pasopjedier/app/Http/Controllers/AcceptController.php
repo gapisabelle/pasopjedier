@@ -53,7 +53,7 @@ class AcceptController extends Controller
             
         }
         catch(Exception $e){
-            return redirect('/response');
+            return redirect('/oops');
         }
         
         

@@ -44,6 +44,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/user/{id}/review/create', [App\Http\Controllers\ReviewController::class, 'create_review']);
     Route::post('/user/review',[App\Http\Controllers\ReviewController::class, 'store_review']);
     Route::get('/user/reviews',[App\Http\Controllers\ReviewController::class, 'index_review']);
+    Route::get('/oops',[App\Http\Controllers\UserController::class, 'show_oops']);
 
 
     Route::get('/pet/{id}', [App\Http\Controllers\PetController::class, 'show']);

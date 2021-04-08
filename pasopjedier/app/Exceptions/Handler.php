@@ -34,8 +34,8 @@ class Handler extends ExceptionHandler
      */
     public function register()
     {
-        $this->reportable(function (Throwable $e) {
-            //
+        $this->renderable(function (InvalidOrderException $e, $request) {
+            return response()->view('pets.show_oops', [], 500);
         });
-    }
+}
 }

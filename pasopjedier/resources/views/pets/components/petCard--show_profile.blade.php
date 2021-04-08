@@ -1,5 +1,4 @@
-<article class="profile">
-
+<section class="profile">
       <section class="profile__card">
           <figure class="profile__header">
             @if ($user->image_info)
@@ -22,11 +21,8 @@
                     <p class="profileReview__text">Nog geen reviews</br></p>
                     @endif 
                 </article>
-                <a href="/profile/edit">
-                    <button class="profile__button"> Profiel Wijzigen </button>
-                </a>
+                <input class="profile__button" type=button onClick="location.href='/profile/edit'" value='Profiel Wijzigen'>
         </section>
-        
     </section>
-</article> 
+</section> 
  

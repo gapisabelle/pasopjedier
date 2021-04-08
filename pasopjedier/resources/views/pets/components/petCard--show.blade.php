@@ -11,16 +11,8 @@
         <p class="petCard__info">Hoelang: {{$pet->aantal_dagen}} dagen</p>
     </section>
     <section class="petCard_btnSection">
-
-        <a href="/pet/{{$pet->id}}/response">
-            <button class="petCard__button"> Op passen </button>
-        </a>
-        <a href="/pet">
-            <button class="petCard__button"> Terug naar dieren </button>
-        </a>
-        <a href="/profile/{{$pet->owner}}">
-            <button class="petCard__button"> Eigenaar </button>
-        </a>
-
+        <input class="petCard__button" type=button onClick="location.href='/pet/{{$pet->id}}/response'" value='Op passen'>
+        <input class="petCard__button" type=button onClick="location.href='/pet'" value='Terug naar dieren'>
+        <input class="petCard__button" type=button onClick="location.href='/profile/{{$pet->owner}}'" value='Eigenaar'>
 </section>
 </article>

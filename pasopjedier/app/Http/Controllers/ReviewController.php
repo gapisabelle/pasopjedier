@@ -23,10 +23,10 @@ class ReviewController extends Controller
 
         try{ 
             $review->save();
-            return redirect('/user/reviews');
+            return redirect('/accept');
         }
         catch(Exception $e){
-            return redirect('/pet');
+            return redirect('/oops');
         }
         
 

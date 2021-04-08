@@ -6,12 +6,8 @@
                 <p class="GridCard__text"> {{$response->bericht}} </p>
         </section> 
         <section class="GridCard__buttons">
-            <a href="/response/delete/{{$response->id}}">
-            <button class="GridCard__button"> Verwijderen </button>
-            </a>
-            <a href="/profile/{{$response->nanny}}">
-            <button class="GridCard__button"> Naar Profiel </button>
-            </a>
+            <input class="GridCard__button" type=button onClick="location.href='/response/delete/{{$response->id}}'" value='Verwijderen'>
+            <input class="GridCard__button" type=button onClick="location.href='/profile/{{$response->nanny}}'" value='Naar Profiel'>
         </section>
         <section class="GridCard__buttons">
             <form class="GridCard-form__form" action="/response/accept" method="POST">

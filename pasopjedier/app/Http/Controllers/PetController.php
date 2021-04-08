@@ -58,26 +58,55 @@ class PetController extends Controller
             'image' => 'mimes:jpeg,bmp,png'
         ]);
         $random = Str::random(40);
-
-        $path = $request->image->storeAs('pet', $random .'.jpg', 'public_uploads');
-
-        $pet ->naam = $request ->input('naam');
-        $pet ->soort = $request ->input('soort');
-        $pet ->datum = $request ->input('datum');
-        $pet ->uurtarief = $request ->input('uurtarief');
-        $pet ->aantal_dagen = $request ->input('aantal_dagen');
-        $pet ->belangrijke_zaken = $request ->input('belangrijke_zaken');
-        $pet ->image = '/img/' . $path;
-        $pet ->owner= Auth::user()->id;
-
-
-        try{ 
-            $pet->save();
-            return redirect('/pet');
+        
+        
+        if ($request->image ==NULL){
+            return redirect('/oops');
+            
         }
-        catch(Exception $e){
-            return redirect('/pet/create');
+        if($request->naam ==NULL){
+            return redirect('/oops');
         }
+        if($request->soort ==NULL){
+            return redirect('/oops');
+        }
+        if($request->datum ==NULL){
+            return redirect('/oops');
+        }
+        if($request->uurtarief ==NULL){
+            return redirect('/oops');
+        }
+        if($request->aantal_dagen ==NULL){
+            return redirect('/oops');
+        }
+        if($request->belangrijke_zaken ==NULL){
+            return redirect('/oops');
+        }
+        else{
+            $path = $request->image->storeAs('pet', $random .'.jpg', 'public_uploads');
+            $pet ->naam = $request ->input('naam');
+            $pet ->soort = $request ->input('soort');
+            $pet ->datum = $request ->input('datum');
+            $pet ->uurtarief = $request ->input('uurtarief');
+            $pet ->aantal_dagen = $request ->input('aantal_dagen');
+            $pet ->belangrijke_zaken = $request ->input('belangrijke_zaken');
+            
+            $pet ->owner= Auth::user()->id;
+
+
+            try{ 
+                $pet->save();
+                return redirect('/pet');
+            }
+            catch(Exception $e){
+                return redirect('/oops');
+            }
+
+        }
+        
+
+        
+        
         
     }
 

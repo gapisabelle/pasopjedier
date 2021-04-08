@@ -12,8 +12,8 @@ Voeg hier je dier toe
         @method('patch')
 
         <section class="create-form__section">
-            </label for="informatie"> Informatie </label>
-            <textarea class="create-form__input create-form__input--big" name="informatie" id="informatie" type="text"></textarea>
+            </label for="informatie"> Informatie * </label>
+            <textarea class="create-form__input create-form__input--big" name="informatie" id="informatie"></textarea>
         </section>
 
         <section class="create-form__section">
@@ -26,7 +26,7 @@ Voeg hier je dier toe
         </section>
 
         <section class="create-form__section">
-            <button class="create-form__button" type="submit">Profiel Aanmaken</button>
+            <button class="create-form__button" type="submit">Profiel Aanvullen</button>
         </section>
     </form>
 </article>

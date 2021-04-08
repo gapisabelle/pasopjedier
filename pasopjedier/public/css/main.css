@@ -24,29 +24,29 @@ body{
     border-radius: 10px;
     
 }
-.navigation_title{
+.navigation__title{
     text-transform: uppercase;
     color:#fff;
 }
-.navigation_list_item{
+.navigation__list__item{
     display: inline-block;
     list-style: none;
     margin: 0 10px;
 }
-.navigation_list_item_text_pressed{
+.navigation__list__item__text__pressed{
     color: white;
     text-decoration: none;
     border-bottom: 3px solid white;
 }
 
-.navigation_list_item_text{
+.navigation__list__item__text{
     text-decoration: none;
     color:#a6b1e1;
     position: relative;
     display: inline-block;
 }
 
-.navigation_list_item_text::before{
+.navigation__list__item__text::before{
     content: attr(data-text);
     color:#fff;
     position: absolute;
@@ -59,20 +59,32 @@ body{
     border-bottom: 3px solid white;
 
 }
+.navigation__list__item__logo__image{
+    width:3rem;
+    float:right;
+    margin-bottom:-1rem;
 
 
+}
 
-.navigation_list_item_text:hover::before{
+
+.navigation__list__item__text:hover::before{
     width: 100%;
 }
-@media(max-width:700px){
+@media(max-width:850px){
     .navigation{
         display: block;
         text-align: center;
     }
-    .navigation_list_item{
+    .navigation__list__item{
         display: block;
         padding: 10px 0;
+    }
+    .navigation__list__item__logo__image{
+        list-style: none;
+        margin: 0 10px;
+        display: inline-block;
+        float:none;
     }
 }
 
@@ -90,13 +102,13 @@ body{
 
 }
 
-@media(max-width:56.25rem){
+@media(max-width:90.25rem){
     .GridCard{
         grid-column:span 6;
     }
     
 }
-@media(max-width:32.5rem){
+@media(max-width:40.5rem){
     .GridCard{
         grid-column:span 12;
     }
@@ -173,6 +185,56 @@ body{
     
     
 }
+@media(max-width:1400px){
+    .GridCard__button{
+        font-size:100%;
+        width:15rem;
+       
+    }
+    
+    
+}
+@media(max-width:800px){
+    .GridCard__button{
+        font-size:90%;
+        width:10rem;
+       
+    }
+    
+    
+}
+@media(max-width:650px){
+    .GridCard__button{
+        font-size:90%;
+        width:20rem;
+
+       
+    }
+    
+    
+}
+@media(max-width:600px){
+    .GridCard__button{
+        font-size:90%;
+        width:15rem;
+
+       
+    }
+    
+    
+}
+@media(max-width:450px){
+    .GridCard__button{
+        font-size:90%;
+        width:10rem;
+
+       
+    }
+    
+    
+}
+
+
 .GridCard__Adminbutton{
     font-size:130%;
     width:20rem;
@@ -203,6 +265,36 @@ body{
 
 
 }
+
+
+@media(max-width:1400px){
+.GridCard-form__button{
+    font-size:100%;
+    width:34rem;
+} 
+}
+@media(max-width:800px){
+    .GridCard-form__button{
+        font-size:90%;
+        width:24rem;
+
+    } 
+    }
+
+@media(max-width:600px){
+    .GridCard-form__button{
+        font-size:90%;
+        width:34rem;
+
+    } 
+}
+@media(max-width:450px){
+    .GridCard-form__button{
+        font-size:90%;
+        width:24rem;
+
+    } 
+    }
 
 
 /* filter klasses */
@@ -250,6 +342,18 @@ body{
     background-color: #a6b1e1;
     
 }
+@media(max-width:68rem){
+    .create-form{
+        width: 70%;
+    }
+    
+}
+@media(max-width:675px){
+    .create-form{
+        width: 100%;
+    }
+    
+}
 
 .create-form__form{
     width: 90%;
@@ -268,7 +372,6 @@ body{
     margin-top:1rem;
     width: 80%;
     font-size: 100%;
-    font-weight: 400%;
     font-family: sans-serif;
 }
 
@@ -303,7 +406,6 @@ body{
     margin-top:1rem;
     width: 80%;
     font-size: 100%;
-    font-weight: 400%;
     font-family: sans-serif;
 }
 
@@ -337,7 +439,7 @@ body{
 
 }
 .GridCard-Reviewform__input{
-    height:rem;
+    height:3rem;
     width: 100%;
 
 }
@@ -360,6 +462,42 @@ body{
     float:left;
 
 }
+@media(max-width:1000px){
+    .GridCard-Reviewform__button{
+        font-size:80%;
+        width:15rem;
+    
+    }
+
+}
+@media(max-width:800px){
+    .GridCard-Reviewform__button{
+        font-size:80%;
+        width:10rem;
+    
+    }
+
+}
+@media(max-width:500px){
+    .GridCard-Reviewform__button{
+        font-size:80%;
+        width:15rem;
+    
+    }
+
+}
+@media(max-width:430px){
+    .GridCard-Reviewform__button{
+        font-size:90%;
+        width:20rem;
+        float:left;
+    
+    }
+
+}
+
+
+
 .GridCard-Reviewform__label{
     color: #424874;
 
@@ -380,6 +518,42 @@ body{
 
 }
 
+@media(max-width:1000px){
+    .GridCard__Annuleerbutton{
+        font-size:120%;
+        width:15rem;
+    
+    }
+
+}
+@media(max-width:800px){
+    .GridCard__Annuleerbutton{
+        font-size:120%;
+        width:10rem;
+    
+    }
+
+}
+
+@media(max-width:500px){
+    .GridCard__Annuleerbutton{
+        font-size:120%;
+        width:15rem;
+    
+    }
+
+}
+@media(max-width:430px){
+    .GridCard__Annuleerbutton{
+        font-size:130%;
+        width:20rem;
+        float:left;
+        margin-left: 1.7rem;
+
+    
+    }
+
+}
 
 
 @media(max-width:32.5rem){
@@ -401,66 +575,25 @@ body{
     }
     
 }
-
-
-
-
-
-/* utility classes */
-
-.u-list-style-none{
-    list-style:none;
-}
-
-.u-grid-12{
-    width: 100%;
-    display:grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    margin-top: 5rem;
-}
-
-.u-grid-gap-2{
-    gap: 2rem;
-}
-
-.u-flex-v-center{
-    display:flex;
-    align-items: center;
-}
-
-/* animations */
-
-.a-popup{
-    animation-name: popup;
-    animation-duration: 0.8s;
-    animation-fill-mode: backwards;
-
-}
-
-.a-popup:nth-of-type(2n){
-    animation-delay: 0.1s;
-}
-.a-popup:nth-of-type(3n){
-    animation-delay: 0.2s;
-}
-
-@keyframes popup{
-    0%{
-        transform: scale(1.05);
-        opacity:0;
+@media(max-width:375px){
+    .filter-section__input{
+        margin-right: 0.4rem;
+        
     }
-
-    70%{
-        transform:scale(0.95);
+    .filter-section_title{
+        color:#fff;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    
     }
-
-    100%{
-        transform:scale(1);
-        opacity:1;
+    .filter-section__label{
+        color:#fff;
+        font-size: 1.5rem;
+        
+    
     }
+    
 }
-
-
 
 
 .profile__header__img{
@@ -481,6 +614,23 @@ body{
     box-shadow:  0px 0px 18px #ccc;
     height: 180px;
 }
+
+@media(max-width:800px){
+    .profile__card{
+        width: 40rem;
+
+    }
+
+}
+@media(max-width:500px){
+    .profile__card{
+        width: 30rem;
+
+    }
+
+}
+
+
 .profile__header{
     height: 180px;
 }
@@ -538,11 +688,11 @@ body{
 
 .petCard{
     width: 60rem;
-    height: 80vh;
     margin: 5rem auto;
     box-shadow: 0 0.2rem 2rem black;
     position: relative;
     background-color: #dcd6f7;
+    margin-bottom: 2rem;
 }
 
 @media(max-width:37.5rem){
@@ -597,7 +747,7 @@ body{
 
 .petCard__button{
     font-size:110%;
-    width:18rem;
+    width:18.3rem;
     height:5rem;
     box-sizing: border-box;
     background-color: #424874;
@@ -606,17 +756,124 @@ body{
     box-shadow: 0 0 5rem rgba(66, 72, 116, 0.7);
     transition: 0.2s all;
     margin-top:2rem;
+    margin-bottom: 2rem;
 
 }
-@media(max-width:37.5rem){
+@media(max-width:600px){
     .petCard__button{
-        width:15rem;
+        width:31rem;
+        margin-bottom:0.5rem;
     }
-}
 
+}
+@media(max-width:400px){
+    .petCard__button{
+        width:21rem;
+        margin-bottom:0.5rem;
+    }
+
+}
 .petCard__button:hover{
     cursor:pointer;
     box-shadow: 0 0 5rem rgba(7, 104, 159, 0.9);
 
+}
+
+.oops{
+    width: 100%;
+    height: 100vh;
+}
+.oops__card{
+    width: 60rem;
+    height: auto;
+    text-align: center;
+    margin: 6rem auto;
+    box-shadow:  0px 0px 18px #ccc;
+    height: 180px;
+    background-color:#a6b1e1;
+    display:flex;
+    justify-content: center;
+
+}
+
+.oops__card__text{
+    font-size:120%;
+    margin:2rem;
+    
+}
+
+@media(max-width:675px){
+    .oops__card{
+        width:40rem;
+    }
+}
+
+@media(max-width:475px){
+    .oops__card{
+        width:30rem;
+    }
+}
+@media(max-width:375px){
+    .oops__card{
+        width:20rem;
+        height: 30rem;
+    }
+}
+
+
+
+
+/* utility classes */
+
+.u-list-style-none{
+    list-style:none;
+}
+
+.u-grid-12{
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    margin-top: 5rem;
+}
+
+.u-grid-gap-2{
+    gap: 2rem;
+}
+
+.u-flex-v-center{
+    display:flex;
+    align-items: center;
+}
+
+/* animations */
+
+.a-popup{
+    animation-name: popup;
+    animation-duration: 0.8s;
+    animation-fill-mode: backwards;
+
+}
+
+.a-popup:nth-of-type(2n){
+    animation-delay: 0.1s;
+}
+.a-popup:nth-of-type(3n){
+    animation-delay: 0.2s;
+}
+
+@keyframes popup{
+    0%{
+        transform: scale(1.05);
+        opacity:0;
+    }
+
+    70%{
+        transform:scale(0.95);
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
 }
 

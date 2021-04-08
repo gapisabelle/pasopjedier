@@ -71,6 +71,10 @@ class UserController extends Controller
             $user->image = '/img/' . $path;
             
         }
+        if ($request->informatie ==NULL){
+            return redirect('/oops');
+            
+        }
         
 
         $user->informatie = $request->input('informatie');
@@ -82,7 +86,7 @@ class UserController extends Controller
             return redirect('/pet');
         }
         catch(Exception $e){
-            return redirect('/pet');
+            return redirect('/oops');
         }
     }
     public function index_profile(){
@@ -104,6 +108,12 @@ class UserController extends Controller
     public function edit_profile(){
         return view('pets.create_profile' ,[
             'images' => \App\Models\Image::all(), 
+        ]);
+    }
+
+    public function show_oops(){
+        return view('pets.show_oops', [
+
         ]);
     }
 

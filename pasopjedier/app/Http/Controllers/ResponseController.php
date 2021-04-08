@@ -47,10 +47,10 @@ class ResponseController extends Controller
 
         try{ 
             $response->save();
-            return redirect('/response');
+            return redirect('/pet');
         }
         catch(Exception $e){
-            return redirect('/response');
+            return redirect('/oops');
         }
         
     }
