@@ -2,7 +2,7 @@
     <a href="/profile/{{$profile->id}}">
         <article>
             <header class="GridCard__header u-flex-v-center">
-                <h2 class="GridCard__heading">{{$profile->naam}}</h2>
+                <h2 class="GridCard__heading">{{$profile->name}}</h2>
             </header>
             <figure class="GridCard__figure">
                 <img class="GridCard__image" src="{{$profile->image}}" alt="{{$profile->naam}}" />

@@ -22,6 +22,7 @@ class CreateResponseOnPet extends Migration
             $table->string('bericht');
             $table->unsignedBigInteger("owner");
             $table->foreign('owner')->references('id')->on('users');
+            $table->integer('status')->default(0);
         });
     }
 

@@ -16,6 +16,9 @@ class ReviewController extends Controller
     public function store_review(Request $request, \App\Models\Review $review){
         $review ->owner= $request->input('owner');
         $review ->review = $request->input('review');
+        $accept = \App\Models\Accept::find($request->input('id_accept'));
+        $accept->status = 1;
+        $accept->save();
         
 
         try{ 

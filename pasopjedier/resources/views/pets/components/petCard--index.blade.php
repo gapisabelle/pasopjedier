@@ -2,7 +2,7 @@
     <a href="/pet/{{$pet->id}}">
         <article>
             <header class="GridCard__header u-flex-v-center">
-                <h2 class="GridCard__heading"> {{$pet->soort}} {{$pet->naam}} {{$pet->owner}}</h2>
+                <h2 class="GridCard__heading"> {{$pet->soort}} {{$pet->naam}}</h2>
             </header>
             <figure class="GridCard__figure">
                 <img class="GridCard__image" src="{{$pet->image}}" alt="{{$pet->image . ' ' . $pet->soort}}" />

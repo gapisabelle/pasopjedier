@@ -18,11 +18,12 @@ class CatPetTableSeeder extends Seeder
         DB::table('pet')->insert([
             'naam'=> "Jane",
             'soort'=> 'kat',
-            'datum'=> '12-4-2021',
+            'datum'=> '2021-4-08',
             'uurtarief' => 10,
             'aantal_dagen' => 14,
             'belangrijke_zaken'=> "Jane houdt van kroelen",
             'owner'=>1,
+            'image'=> '/img/cat_default.png',
             
 
 
@@ -30,11 +31,12 @@ class CatPetTableSeeder extends Seeder
         DB::table('pet')->insert([
             'naam'=> "Bowie",
             'soort'=> 'kat',
-            'datum'=> '21-4-2021',
+            'datum'=> '2021-4-03',
             'uurtarief' => 15,
             'aantal_dagen' => 7,
             'belangrijke_zaken'=> "Als Bowie iets niet wilt, moet je het ook niet doen",
             'owner'=>2,
+            'image'=> '/img/cat_default.png',
 
         ]);
 

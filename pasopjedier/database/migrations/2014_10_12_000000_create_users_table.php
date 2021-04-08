@@ -24,7 +24,8 @@ class CreateUsersTable extends Migration
             $table->boolean('blocked')->default(false);
 
             $table->string("informatie")->nullable();
-            $table->string("image")->default("/img/pet_default.jpg");
+            $table->string("image")->default("/img/paw.jpg")->nullable();
+            $table->string("image_info")->nullable();
             $table->unsignedBigInteger("user")->nullable();
             
         });

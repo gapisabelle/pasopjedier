@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PetController extends Controller
 {
@@ -51,13 +53,21 @@ class PetController extends Controller
 
 
     public function store(Request $request, \App\Models\Pet $pet){
+
+        $request->validate([
+            'image' => 'mimes:jpeg,bmp,png'
+        ]);
+        $random = Str::random(40);
+
+        $path = $request->image->storeAs('pet', $random .'.jpg', 'public_uploads');
+
         $pet ->naam = $request ->input('naam');
         $pet ->soort = $request ->input('soort');
         $pet ->datum = $request ->input('datum');
         $pet ->uurtarief = $request ->input('uurtarief');
         $pet ->aantal_dagen = $request ->input('aantal_dagen');
         $pet ->belangrijke_zaken = $request ->input('belangrijke_zaken');
-        $pet ->image = $request ->input('image');
+        $pet ->image = '/img/' . $path;
         $pet ->owner= Auth::user()->id;
 
 

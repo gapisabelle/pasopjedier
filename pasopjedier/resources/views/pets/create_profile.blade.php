@@ -7,29 +7,23 @@ Voeg hier je dier toe
 @section('content')
 
 <article class="create-form a-popup"> 
-    <form class="create-form__form" action="/profile" method="POST">
+    <form class="create-form__form" action="/profile/update" method="POST" enctype="multipart/form-data">
         @csrf
-
-        <section class="create-form__section">
-            </label for="naam"> Naam </label>
-            <input class="create-form__input" name="naam" id="naam" type="text"/>
-        </section>
+        @method('patch')
 
         <section class="create-form__section">
             </label for="informatie"> Informatie </label>
-            <textarea class="create-form__input create-form__input--big" name="informatie" id="informatie" type="textarea"></textarea>
+            <textarea class="create-form__input create-form__input--big" name="informatie" id="informatie" type="text"></textarea>
         </section>
-
 
         <section class="create-form__section">
-            </label for="image"> Afbeelding </label>
-            <select class="create-form__input" name="image" id="image">
-                @foreach ($images as $image)
-                <option value="{{$image->image}}">{{$image->image}}</option>
-                @endforeach
-            </select>
+            </label for="image"> Profielfoto </label>
+            <input type = "file" name="image" id="image"/>
         </section>
-
+        <section class="create-form__section">
+            </label for="image_info"> Extra foto </label>
+            <input type = "file" name="image_info" id="image_info"/>
+        </section>
 
         <section class="create-form__section">
             <button class="create-form__button" type="submit">Profiel Aanmaken</button>

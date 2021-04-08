@@ -14,7 +14,9 @@ class ResponseController extends Controller
         
 
         return view('pets.create_response', [
-            'pet' =>  \App\Models\Pet::find($id)
+            'pet' =>  \App\Models\Pet::find($id),
+            'owner' =>  \App\Models\User::where('id', \App\Models\pet::find($id)->owner )->first(),
+            
         ]);
     }
     
@@ -23,7 +25,7 @@ class ResponseController extends Controller
     public function index_response(){
         return view('pets.index_response',[
 
-           'response_on_pet' => \App\Models\Response::where('owner', Auth::user()->id)->get(),
+           'response_on_pet' => \App\Models\Response::where([['owner', Auth::user()->id], ['status', '=', 0]])->get(),
           
        ]);
 
@@ -39,6 +41,7 @@ class ResponseController extends Controller
         $response ->owner= $request->input('owner');
         $response ->nanny = Auth::user()->id;
         $response ->bericht = $request ->input('bericht');
+        
 
 
 

@@ -17,11 +17,11 @@ class CreatePetTable extends Migration
             $table->id();
             $table->string("naam");
             $table->string("soort")->references("soort")->on("kind_of_pet");
-            $table->string("datum");
+            $table->date("datum");
             $table->integer("uurtarief");
             $table->integer("aantal_dagen");
             $table->string("belangrijke_zaken");
-            $table->string("image")->default("/img/pet_default.jpg");
+            $table->string("image")->default("/img/paw.jpg");
             $table->unsignedBigInteger("owner")->nullable();
             $table->foreign('owner')->references('id')->on('users');
             $table->unsignedBigInteger("nanny")->nullable();

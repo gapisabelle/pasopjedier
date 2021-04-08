@@ -3,12 +3,14 @@
 @section('title')
 Reageer hier op het dier
 @endsection
+
+@section('content')
 <article class="create-form a-popup"> 
     <form class="create-form__form" action="/response" method="POST">
         @csrf
         
         <section class="create-form__section">
-            </label for="bericht"> bericht </label>
+            </label for="bericht"> Bericht aan {{$owner->name}}</label>
             <input class="create-form__input" name="bericht" id="bericht" type="text"/>
             <input type = "hidden" name = "pet" value = "{{$pet->id}}" />
             <input type = "hidden" name = "owner" value = "{{$pet->owner}}" />
@@ -16,5 +18,4 @@ Reageer hier op het dier
         </section>
     </form>
 </article>
-@section('content')
 @endsection

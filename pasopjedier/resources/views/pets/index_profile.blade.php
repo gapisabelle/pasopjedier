@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-@include('pets.components.checkbox--index')
+<h1> Alle profielen </h1>
 <ul class="u-grid-12 u-grid-gap-2">
-    @foreach($user_info as $profile)
+    @foreach($user as $profile)
         @include('pets.components.petCard--index_profile')
     @endforeach
 </ul>

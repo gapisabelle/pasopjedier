@@ -1,21 +1,29 @@
 <li class="a-popup u-list-style-none GridCard" >
-        <article>
-            <header class="GridCard__header u-flex-v-center">
-                <h2 class="GridCard__heading"> </h2>
-            </header>
-            <section class="GridCard__textSection u-flex-v-center">
+        <header class="GridCard__header u-flex-v-center">
+            <h2 class="GridCard__heading"> {{$response->user->name}}</h2>
+        </header>
+        <section class="GridCard__textSection u-flex-v-center">
                 <p class="GridCard__text"> {{$response->bericht}} </p>
-            </section> 
+        </section> 
+        <section class="GridCard__buttons">
             <a href="/response/delete/{{$response->id}}">
-            <button class="sushiCard__button"> Verwijderen </button>
-            </a>
-            <a href="/response/{{$response->id}}/accept">
-            <button class="sushiCard__button"> Accepteren </button>
+            <button class="GridCard__button"> Verwijderen </button>
             </a>
             <a href="/profile/{{$response->nanny}}">
-            <button class="sushiCard__button"> Naar Profiel </button>
+            <button class="GridCard__button"> Naar Profiel </button>
             </a>
-        </article>
-      </a>
+        </section>
+        <section class="GridCard__buttons">
+            <form class="GridCard-form__form" action="/response/accept" method="POST">
+                @csrf      
+                <section class="GridCard-form__section">
+                    <input type = "hidden" name = "pet" value = "{{$response->pet}}" />
+                    <input type = "hidden" name = "nanny" value = "{{$response->nanny}}" />
+                    <input type = "hidden" name = "id" value = "{{$response->id}}" />
+                    <button class="GridCard-form__button" type="submit">Accepteer</button>
+                </section>
+            </form>
+        </section>
+       
 </li>
 

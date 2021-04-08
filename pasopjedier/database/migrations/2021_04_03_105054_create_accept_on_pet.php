@@ -21,6 +21,7 @@ class CreateAcceptOnPet extends Migration
             $table->foreign('nanny')->references('id')->on('users');
             $table->unsignedBigInteger("owner");
             $table->foreign('owner')->references('id')->on('users');
+            $table->integer('status')->default(0);
         });
     }
 

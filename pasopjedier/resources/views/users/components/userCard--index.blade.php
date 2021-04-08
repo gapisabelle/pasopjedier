@@ -2,10 +2,12 @@
         <article>
             <header class="GridCard__header u-flex-v-center">
                 <h2 class="GridCard__heading"> {{$user->name}}</h2>
-                <h3 class="GridCard__heading"> {{$user->id}}</h3>
             </header>
+            <figure class="GridCard__figure">
+                <img class="GridCard__image" src="{{$user->image}}" alt="{{$user->name}}" />
+            </figure>
             <a href="/user/{{$user->id}}/block">
-            <button class="sushiCard__button"> Blokkeren </button>
+            <button class="GridCard__Adminbutton"> Blokkeren </button>
             </a>
         </article>
       </a>

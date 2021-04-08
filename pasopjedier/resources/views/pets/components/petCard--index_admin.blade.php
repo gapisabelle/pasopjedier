@@ -7,11 +7,8 @@
             <figure class="GridCard__figure">
                 <img class="GridCard__image" src="{{$pet->image}}" alt="{{$pet->image . ' ' . $pet->soort}}" />
             </figure>
-            <section class="GridCard__textSection u-flex-v-center">
-                <p class="GridCard__text"> {{$pet->belangrijke_zaken}} </p>
-            </section> 
             <a href="/delete/{{$pet->id}}">
-            <button class="sushiCard__button"> Verwijderen </button>
+            <button class="GridCard__Adminbutton"> Verwijderen </button>
             </a>
         </article>
       </a>

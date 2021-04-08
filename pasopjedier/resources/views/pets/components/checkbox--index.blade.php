@@ -1,4 +1,5 @@
 <section class="filter-section">
+<h1 class="filter-section_title">Filteren</h1>
     <section class="filter-section__wrapper"> 
         <label class="filter-section__label" for="Hond"> Honden </label>
         <input class="filter-section__input" id="hond" type="checkbox" name="hond" />

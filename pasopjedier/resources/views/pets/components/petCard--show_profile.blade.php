@@ -1,14 +1,32 @@
-<li>
-    <article class="sushiCard a-popup">
-        <figure class="sushiCard__figure">
-            <img class="sushiCard__image" src="{{$user_info->image}}" alt="{{$user_info->naam}} "/>
+<article class="profile">
+
+      <section class="profile__card">
+          <figure class="profile__header">
+            @if ($user->image_info)
+            <img class="profile__header__img" src="{{$user->image_info}}" alt="{{$user->naam}} "/>
+            @else
+            <p class="profile__Homeimage">Geen extra afbeeldingen</br></p>
+            @endif
         </figure>
-        <section class="sushiCard__text">
-            <p>{{$user_info->naam}} {{$user_info->informatie}}  </p>
-            <p>{{$review->review}}</p>
+          <section class="profile__body">
+                <figure class="profile__body__img">
+                    <img class="profile__body__img__image" src="{{$user->image}}" alt="{{$user->naam}}"/>
+                </figure>
+                <h1 class="profile__body__name">{{$user->name}}</br></h1>
+                <p class="profile__body__info"> {{$user->informatie}}</p>
+                <article class="profileReview a-popup">
+                    @if ($review)
+                    <h1 class="profileReview__text">Reviews: </h1>
+                    <p class="profileReview__text">{{ $review->review }}</br></p>
+                    @else
+                    <p class="profileReview__text">Nog geen reviews</br></p>
+                    @endif 
+                </article>
+                <a href="/profile/edit">
+                    <button class="profile__button"> Profiel Wijzigen </button>
+                </a>
         </section>
-        <section class="sushiCard_btnSection">
-            <a class="sushiCard_back_to_home" href="/profile"> Terug </a>
+        
     </section>
-    </article>
-</li>
+</article> 
+ 
