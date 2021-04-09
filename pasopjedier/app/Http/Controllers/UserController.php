@@ -71,13 +71,13 @@ class UserController extends Controller
             $user->image = '/img/' . $path;
             
         }
-        if ($request->informatie ==NULL){
-            return redirect('/oops');
+        if ($request->informatie !==NULL){
+            $user->informatie = $request->input('informatie');
             
         }
         
 
-        $user->informatie = $request->input('informatie');
+        
 
         
 

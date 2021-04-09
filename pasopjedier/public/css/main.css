@@ -182,9 +182,11 @@ body{
     transition: 0.2s all;
     margin-top:2rem;
     margin:2rem;
+    float:left
     
     
 }
+
 @media(max-width:1400px){
     .GridCard__button{
         font-size:100%;
@@ -194,6 +196,16 @@ body{
     
     
 }
+@media(min-width:1450px){
+
+    .GridCard__buttons{
+        float:left;
+    }
+    
+    
+}
+
+
 @media(max-width:800px){
     .GridCard__button{
         font-size:90%;
@@ -273,6 +285,12 @@ body{
     width:34rem;
 } 
 }
+@media(min-width:1400px){
+    .GridCard-form__button{
+        margin-left:2rem;
+        
+    } 
+    }
 @media(max-width:800px){
     .GridCard-form__button{
         font-size:90%;
@@ -677,6 +695,7 @@ body{
     box-shadow: 0 0 5rem rgba(66, 72, 116, 0.7);
     transition: 0.2s all;
     margin-top:2rem;
+    margin-bottom:2rem;
 
 }
 

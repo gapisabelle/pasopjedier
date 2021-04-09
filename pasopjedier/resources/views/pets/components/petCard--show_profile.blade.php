@@ -16,12 +16,22 @@
                 <article class="profileReview a-popup">
                     @if ($review)
                     <h1 class="profileReview__text">Reviews: </h1>
-                    <p class="profileReview__text">{{ $review->review }}</br></p>
+                    <p class="profileReview__text">{{$review->review }}</br></p>
                     @else
                     <p class="profileReview__text">Nog geen reviews</br></p>
                     @endif 
                 </article>
+                @if (Auth::user()->id == $user->id)
                 <input class="profile__button" type=button onClick="location.href='/profile/edit'" value='Profiel Wijzigen'>
+                <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-dropdown-link :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Uitloggen') }}
+                            </x-dropdown-link>
+                        </form>
+                @endif
         </section>
     </section>
 </section> 

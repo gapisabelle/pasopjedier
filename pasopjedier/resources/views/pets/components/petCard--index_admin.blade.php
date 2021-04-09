@@ -6,7 +6,7 @@
             <figure class="GridCard__figure">
                 <img class="GridCard__image" src="{{$pet->image}}" alt="{{$pet->image . ' ' . $pet->soort}}" />
             </figure>
-            <input class="GridCard__Adminbutton" type=button onClick="location.href='/delete/{{$pet->id}}'" value='Verwijderen'>
+            <input class="GridCard__Adminbutton" type=button onClick="location.href='/pet/delete/{{$pet->id}}'" value='Verwijderen'>
         </article>
       </a>
 </li>

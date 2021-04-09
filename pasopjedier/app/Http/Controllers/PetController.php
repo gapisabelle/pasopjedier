@@ -41,9 +41,8 @@ class PetController extends Controller
     }
     public function destroy($id) {
         DB::delete('delete from pet where id = ?',[$id]);
-        echo "Record deleted successfully.
-        ";
-        echo 'Click Here to go back.';
+        return redirect('/pet');
+        
         }
 
     public function redirect(){
@@ -84,6 +83,7 @@ class PetController extends Controller
         }
         else{
             $path = $request->image->storeAs('pet', $random .'.jpg', 'public_uploads');
+            $pet->image = '/img/' . $path;
             $pet ->naam = $request ->input('naam');
             $pet ->soort = $request ->input('soort');
             $pet ->datum = $request ->input('datum');

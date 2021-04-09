@@ -64,6 +64,7 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/', [App\Http\Controllers\PetController::class, 'redirect']);
     Route::get('/response/delete/{id}',[App\Http\Controllers\ResponseController::class, 'destroy_response']);
     Route::get('/oops',[App\Http\Controllers\UserController::class, 'show_oops']);
+
     
 });
     
